@@ -110,6 +110,8 @@ const getNeighbours = (board, row, cell) => {
 };
 
 const startGame = () => {
+  const startBtn = document.getElementById("startLife");
+  startBtn.innerText = "Pause";
   gameInterval = setInterval(() => {
     const updatedBoard = applyRules(board);
     board = updatedBoard;
@@ -120,6 +122,8 @@ const startGame = () => {
 };
 
 const pauseGame = () => {
+  const startBtn = document.getElementById("startLife");
+  startBtn.innerText = "Start";
   clearInterval(gameInterval);
 };
 
